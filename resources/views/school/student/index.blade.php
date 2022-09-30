@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/jquery-ui.css')}}">
 @stop
 @section('content')
-<form id="formReg" action="{{route('discipline.index')}}" method="POST">
+<form id="formReg" action="{{route('student.index')}}" method="POST">
     @csrf
     @method("POST")
 <table id="example2" class="table table-bordered table-hover">
@@ -21,22 +21,22 @@
     </thead>
     <tbody>
         @livewire('search-users')
-        @foreach ($Disciplines as $discipline)
+        @foreach ($Students as $student)
         <tr>
-            <td>{{$discipline->id}}</td>
-            <td>{{$discipline->discipline}}</td>
-            <td>{{$discipline->course}}</td>
+            <td>{{$student->course}}</td>
+            <td>{{$student->disciplina}}</td>
+            <td>{{$student->team}}</td>
             <td>
                 <th class='d-flex'>
-                <a href="{{route('discipline.edit', $discipline->id)}}" class="btn btn-success"><i class="fas fa-pencil-alt"></i></a>
-                <form action="{{route('discipline.destroy', $discipline->id)}}" method='POST'>
+                <a href="{{route('student.edit', $student->id)}}" class="btn btn-success"><i class="fas fa-pencil-alt"></i></a>
+                <form action="{{route('student.destroy', $student->id)}}" method='POST'>
                     @csrf
                     @method('DELETE')
                     <button class='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
                 </form>
             </td>
         </tr>
-        @endforeach
+    @endforeach
     </tbody>
     </table>
 @stop

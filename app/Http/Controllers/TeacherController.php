@@ -16,7 +16,7 @@ class TeacherController extends Controller
     public function index()
     {
         $teacher = teacher::all();
-        return view('admin.teacher.index', compact('teacher'));
+        return view('school.teacher.index', compact('teacher'));
     }
 
     /**
@@ -26,7 +26,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        return view('admin.teacher.create');
+        return view('school.teacher.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class TeacherController extends Controller
      */
     public function edit(teacher $teacher)
     {
-        return view('admin.teacher.edit', compact('teacher'));
+        return view('school.teacher.edit', compact('teacher'));
     }
 
     /**

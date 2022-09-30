@@ -312,11 +312,29 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
+            'text'        => 'Student',
+            'url'         => '/student',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Teacher',
+            'url'         => '/teacher',
+            'icon'        => 'far fa-fw fa-file',
+        ],
+        [
+            'text'        => 'Course',
+            'url'         => '/course',
+            'icon'        => 'far fa-fw fa-file',
+        ],
+        [
+            'text'        => 'Discipline',
+            'url'         => '/discipline',
+            'icon'        => 'far fa-fw fa-file',
+        ],
+        [
+            'text'        => 'Team',
+            'url'         => '/team',
+            'icon'        => 'far fa-fw fa-file',
         ],
         ['header' => 'account_settings'],
         [

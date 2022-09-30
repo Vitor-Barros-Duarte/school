@@ -16,7 +16,7 @@ class DisciplineController extends Controller
     public function index()
     {
         $discipline = discipline::all();
-        return view('discipline.index', compact('discipline'));
+        return view('school.discipline.index', compact('discipline'));
     }
 
     /**
@@ -26,7 +26,7 @@ class DisciplineController extends Controller
      */
     public function create()
     {
-        return view('discipline.create');
+        return view('school.discipline.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class DisciplineController extends Controller
      */
     public function edit(discipline $discipline)
     {
-        return view('discipline.edit', compact('discipline'));
+        return view('school.discipline.edit', compact('discipline'));
     }
 
     /**

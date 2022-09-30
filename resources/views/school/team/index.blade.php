@@ -21,15 +21,17 @@
     </thead>
     <tbody>
         @livewire('search-users')
-        @foreach ($Disciplines as $discipline)
+        @foreach ($Teams as $team)
         <tr>
-            <td>{{$discipline->id}}</td>
-            <td>{{$discipline->discipline}}</td>
-            <td>{{$discipline->course}}</td>
+            <td>{{$team->id}}</td>
+            <td>{{$team->name_team}}</td>
+            <td>{{$team->course}}</td>
+            <td>{{$team->student}}</td>
+            <td>{{$team->teacher}}</td>
             <td>
                 <th class='d-flex'>
-                <a href="{{route('discipline.edit', $discipline->id)}}" class="btn btn-success"><i class="fas fa-pencil-alt"></i></a>
-                <form action="{{route('discipline.destroy', $discipline->id)}}" method='POST'>
+                <a href="{{route('team.edit', $team->id)}}" class="btn btn-success"><i class="fas fa-pencil-alt"></i></a>
+                <form action="{{route('team.destroy', $team->id)}}" method='POST'>
                     @csrf
                     @method('DELETE')
                     <button class='btn btn-danger'><i class="fas fa-trash-alt"></i></button>

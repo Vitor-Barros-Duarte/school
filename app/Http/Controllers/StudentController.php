@@ -17,7 +17,7 @@ class StudentController extends Controller
     public function index()
     {
         $student = student::all();
-        return view('admin.student.index', compact('student'));
+        return view('school.student.index', compact('student'));
     }
 
     /**
@@ -27,7 +27,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('admin.student.create');
+        return view('school.student.create');
     }
 
     /**
@@ -50,20 +50,6 @@ class StudentController extends Controller
      */
     public function show()
     {
-        $data = DB::table('student')
-                ->join('course','student.id_course','=','course.id_course')
-                ->select('student.*', 'course.name as course_name')
-                ->get();
-
-        $data = json_decode($data, true);
-        $size=count($data);
-
-        for($i=0;$i<$size;$i++){
-
-            $data[$i]["address"] ="ADDRESS: ". $data[$i]["address"]. ", DISTRICT: ". $data[$i]["neighborhood"].", CEP: ".$data[$i]["zip"]." , NUMBER: ".$data[$i]["number"].", CITY: ".$data[$i]["city"].", STATE: ".$data[$i]["state"];
-            $data[$i]["phone"]." ".$data[$i][" email"];
-        }
-        return json_encode($data);
 
     }
 
@@ -76,7 +62,7 @@ class StudentController extends Controller
      */
     public function edit(student $student)
     {
-        return view('admin.student.edit', compact('student'));
+        return view('school.student.edit', compact('student'));
     }
 
     /**
