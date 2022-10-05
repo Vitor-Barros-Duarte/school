@@ -10,16 +10,10 @@ class Team extends Model
     public $timestamps = false;
     protected $table = "team";
     public $fillable = [
-        'name',
-        'course',
-        'discipline',
-        'teacher',
-        'student',
+        'name_team',
+        'name_course',
+        'name_teacher',
+        'name_student',
         'date_start',
     ];
-
-    public function relRegistrations()
-    {
-        return $this->hasMany('App\Models\ModelRegistration', 'id_team');
-    }
 }

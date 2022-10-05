@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('student', function (Blueprint $table) {
             $table->increments('id_student');
-            $table->string('name');
+            $table->string('name_student');
             $table->string('phone');
             $table->string('cpf')->unique();
             $table->enum('sex',['M','F','I']);

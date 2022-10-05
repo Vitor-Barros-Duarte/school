@@ -16,29 +16,11 @@
     <thead>
         <tr>
            <th>Nome</th>
+           <th>disciplinas</th>
+           <th>Team</th>
            <th>Ações</th>
         </tr>
     </thead>
-    <tbody>
-        @livewire('search-users')
-        @foreach ($Courses as $course)
-        <tr>
-            <td>{{$course->id}}</td>
-            <td>{{$course->course}}</td>
-            <td>{{$course->discipline}}</td>
-            <td>{{$course->turma}}</td>
-            <td>
-                <th class='d-flex'>
-                <a href="{{route('course.edit', $course->id)}}" class="btn btn-success"><i class="fas fa-pencil-alt"></i></a>
-                <form action="{{route('course.destroy', $course->id)}}" method='POST'>
-                    @csrf
-                    @method('DELETE')
-                    <button class='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
     </table>
 @stop
 @section('js')

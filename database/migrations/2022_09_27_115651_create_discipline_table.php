@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('discipline', function (Blueprint $table) {
             $table->increments('id_discipline');
-            $table->string('name');
+            $table->string('name_discipline');
             $table->datetime('creation_date');
             $table->integer('load_hours');
             $table->timestamps();

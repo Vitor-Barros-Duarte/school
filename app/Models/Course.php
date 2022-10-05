@@ -10,7 +10,8 @@ class Course extends Model
     public $timestamps = false;
     protected $table = "course";
     public $fillable = [
-        'name',
+        'name_course',
+        'name_discipline',
         'load_hours',
     ];
 }

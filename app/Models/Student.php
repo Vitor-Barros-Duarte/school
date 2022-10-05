@@ -9,19 +9,14 @@ class Student extends Model
 {
     protected $table = "student";
     protected $fillable=[
-        'name',
-        'course',
-        'discipline',
-        'team',
+        'name_student',
+        'name_course',
+        'name_discipline',
+        'name_team',
         'CPF',
         'phone',
         'email',
         'birth date'
     ];
-
-    public function relRegistrations()
-    {
-        return $this->hasMany('App\Models\ModelRegistration', 'id_student');
-    }
 }
 

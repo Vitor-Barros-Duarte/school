@@ -1,4 +1,4 @@
-@extends('adminlte::page') @section('title', 'Stock')
+@extends('adminlte::page') @section('title', 'Teacher')
 @section('css')
 	<style>
 	.form-control{
@@ -16,31 +16,12 @@
     <thead>
         <tr>
            <th>Nome</th>
+           <th>discipline</th>
+           <th>Team</th>
            <th>Ações</th>
         </tr>
     </thead>
-    <tbody>
-    @livewire('search-course')
-    @foreach ($Teachers as $teacher)
-    <tr>
-        <td>{{$teacher->id}}</td>
-        <td>{{$teacher->teacher_name}}</td>
-        <td>{{$teacher->course}}</td>
-        <td>{{$teacher->discipline}}</td>
-        <td>{{$teacher->team}}</td>
 
-        <td>
-            <th class='d-flex'>
-            <a href="{{route('teacher.edit', $teacher->id)}}" class="btn btn-success"><i class="fas fa-pencil-alt"></i></a>
-            <form action="{{route('teacher.destroy', $teacher->id)}}" method='POST'>
-                @csrf
-                @method('DELETE')
-                <button class='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
-            </form>
-        </td>
-    </tr>
-    @endforeach
-    </tbody>
     </table>
 @stop
 @section('js')

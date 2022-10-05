@@ -9,16 +9,11 @@ class Teacher extends Model
 {
     protected $table = "teacher";
     protected $fillable=[
-        'nome',
+        'nome_teacher',
+        'name_discipline',
         'cpf',
         'phone',
         'email',
-        'discipline'
 
     ];
-
-    public function relRegistrations()
-    {
-        return $this->hasMany('App\Models\ModelRegistration', 'id_teacher');
-    }
 }
