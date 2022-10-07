@@ -32,8 +32,12 @@
     <div class='row'>
         <div class="col-md-12">
           <label for="Discipline">Disciplina</label>
-          <input type="text" class="form-control" id="disciplinei" name='discipline' placeholder="Disciplina">
+          <input type="text" class="form-control" id="name_disciplinei" name='name_discipline' placeholder="Disciplina">
         </div>
+        <div class="col-md-12">
+            <label for="load_hours">Carga_horária</label>
+            <input type="time" class="form-control" id="load_hours" name='load_hours' placeholder="Carga_horária">
+          </div>
         <div class="col-md-4 pull-right">
           <button type="submit" class="btn btn-primary mb-3">Salvar</button>
         </div>

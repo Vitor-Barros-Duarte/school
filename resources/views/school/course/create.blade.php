@@ -31,8 +31,8 @@
     @method('POST')
     <div class='row'>
         <div class="col-md-12">
-          <label for="Course">Course</label>
-          <input type="text" class="form-control" id="coursei" name='course' placeholder="Curso">
+          <label for="name_course">Course</label>
+          <input type="text" class="form-control" id="name_course" name='name_course' placeholder="Curso">
         </div>
         <div class="col-md-4 pull-right">
           <button type="submit" class="btn btn-primary mb-3">Salvar</button>

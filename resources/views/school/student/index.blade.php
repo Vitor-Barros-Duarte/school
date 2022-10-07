@@ -16,12 +16,40 @@
     <thead>
         <tr>
            <th>Nome</th>
-           <th>course</th>
-           <th>Team</th>
+           <th>Aluno</th>
+           <th>Turma</th>
            <th>Ações</th>
         </tr>
     </thead>
+    <tbody>
 
+        @foreach($student as $student)
+           <tr>
+              <td>{{ $student->id }}</td>
+              <td>{{ $student->name_student }}</td>
+              <td>{{ $student->name_course }}</td>
+              <td>{{ $student->name_discipline }}</td>
+              <td>{{ $student->name_team }}</td>
+              <td>{{ $student->cpf }}</td>
+              <td>{{ $student->birth_date }}</td>
+              <td>
+                <th class='d-flex'>
+                    <a href="{{route('student.edit', $student->id)}}" class="btn btn-success me-mb-3"><i class="fas fa-pencil-alt"></i></a>
+                    <form action="{{route('student.destroy', $student->id)}}" method='POST'>
+                        @csrf
+                        @method('DELETE')
+                        <button class='btn btn-danger me-md-3'><i class="fas fa-trash-alt"></i></button>
+                    </form>
+                </td>
+            </tr>
+        @endforeach
+        <ul class="nav nav-pills">
+            <li class="">
+                <a href="{{route('student.create')}}" val="1" class="btn btn-success">Cadastrar
+                    <i class="fas fa-plus"></i>
+                </a>
+            </li>
+     </tbody>
     </table>
 @stop
 @section('js')

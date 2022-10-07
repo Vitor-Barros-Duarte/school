@@ -23,10 +23,15 @@ class DisciplineStoreFormRequest extends FormRequest
      */
     public function rules()
     {
-        return ['discipline'=> 'required' ];
+        return [
+        'name_discipline'=>'required|string',
+        ];
     }
     public function messages()
     {
-        return['discipline.required'=>'O campo discipline é obrigatório'];
+        return[
+        'name_discipline.required'=>'O campo disciplina é obrigatório',
+        'name_discipline.string'=>'O campo disciplina deve ser string',
+        ];
     }
 }

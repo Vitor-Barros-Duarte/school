@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\TeamStoreFormRequest;
+use App\Http\Resources\student;
+use App\Models\Course;
+use App\Models\Discipline;
+use App\Models\Teacher;
 use App\Models\Team;
 
 class TeamController extends Controller
@@ -37,8 +41,8 @@ class TeamController extends Controller
      */
     public function store(TeamStoreFormRequest $request)
     {
-        team::create($request->validated());
-        return redirect()->route('team.index')->with(['success'=> 'team cadastrado com sucesso']);
+        team::create($request->all());
+        return redirect()->route('team.index')->with(['success'=> 'turma cadastrado com sucesso']);
     }
 
     /**

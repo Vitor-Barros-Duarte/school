@@ -14,14 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('teacher', function (Blueprint $table) {
-            $table->increments('id_teacher');
+            $table->id();
             $table->string('name_teacher');
             $table->string('phone');
             $table->string('cpf')->unique();
             $table->enum('sex',['M','F','I']);
             $table->date('birth_date')->nullable();
-            $table->datetime('creation_date');
-            $table->datetime('date_att')->nullable();
             $table->string('address')->nullable();
             $table->string('district')->nullable();
             $table->string('state')->nullable();

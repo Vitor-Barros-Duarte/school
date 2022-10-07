@@ -23,10 +23,16 @@ class TeamStoreFormRequest extends FormRequest
      */
     public function rules()
     {
-        return ['team'=> 'required' ];
+        return [
+            'name_team'=>'required|string',
+
+    ];
     }
     public function messages()
     {
-        return['team.required'=>'O campo team é obrigatório'];
+        return[
+            'name_team.required'=>'O campo nome é obrigatório',
+            'name_team.string'=>'O campo nome deve ser string',
+        ];
     }
 }

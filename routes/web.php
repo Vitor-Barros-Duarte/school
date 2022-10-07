@@ -31,4 +31,5 @@ Route::resource('/discipline', DisciplineController::class)->except('show');
 Route::resource('/course', CourseController::class)->except('show');
 Route::resource('/team', TeamController::class)->except('show');
 
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\StudentStoreFormRequest;
+use App\Models\Course;
+use App\Models\Discipline;
 use App\Models\Student;
 use Illuminate\Support\Facades\DB;
 

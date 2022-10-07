@@ -24,8 +24,7 @@ class StudentStoreFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|string',
-            'cpf'=>'required|string',
+            'name_student'=>'required|string',
             'sex'=>'required|in:M,F,I',
             'birth_date'=> 'required|date',
             'phone'=> 'required|string',
@@ -42,8 +41,6 @@ class StudentStoreFormRequest extends FormRequest
         return[
             'name.required'=>'O campo nome é obrigatório',
             'name.string'=>'O campo nome deve ser string',
-            'cpf.required'=>'O campo CPF é obrigatório',
-            'cpf.string'=>'O campo CPF é obrigatório',
             'sex.required'=>'O campo sexo é obrigatório',
             'sex.in:M,F,I'=>'O campo sexo deve ser selecionado',
             'birth_date.required'=> 'O campo data de nascimento e obrigatório',

@@ -31,8 +31,8 @@
     @method('PUT')
     <div class='row'>
         <div class="col-md-12">
-          <label for="team">Team</label>
-          <input type="text" class="form-control" id="teami" name='team' placeholder="Professor" value="{{$team->team}}">
+          <label for="name_team">Team</label>
+          <input type="text" class="form-control" id="name_team" name='name_team' placeholder="Turma" value="{{$team->team}}">
         </div>
         <div class="col-md-4 pull-right">
           <button type="submit" class="btn btn-primary mb-3">Salvar</button>

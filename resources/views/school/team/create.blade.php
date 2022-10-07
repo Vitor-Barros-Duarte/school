@@ -1,4 +1,4 @@
-@extends('adminlte::page') @section('title', 'Disciplina')
+@extends('adminlte::page') @section('title', 'Team')
 @section('css')
 	<style>
 	.form-control{
@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{ asset('css/jquery-ui.css')}}">
 @stop
 @section('content_header')
-
 @stop
 @section('content')
 @if(session()->has('errors'))
@@ -29,17 +28,17 @@
 <form action="{{route('team.store')}}" method="POST">
     @csrf
     @method('POST')
-    <div class='row'>
-        <div class="col-md-12">
-          <label for="Team">Disciplina</label>
-          <input type="text" class="form-control" id="teami" name='team' placeholder="Professor">
+    <div class='form-row col-lg-6'>
+        <div class="col-lg-8 mt-4">
+          <label for="name_Team">Turma</label>
+          <input type="text" class="form-control" id="name_team" name='name_team' placeholder="Nome da Tuma">
         </div>
+
         <div class="col-md-4 pull-right">
           <button type="submit" class="btn btn-primary mb-3">Salvar</button>
         </div>
     </div>
   </form>
-
 @stop
 @section('js')
 @stop

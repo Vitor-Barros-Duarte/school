@@ -23,10 +23,15 @@ class CourseStoreFormRequest extends FormRequest
      */
     public function rules()
     {
-        return ['course'=> 'required' ];
+        return [
+            'name_course'=>'required|string',
+        ];
     }
     public function messages()
     {
-        return['course.required'=>'O campo course é obrigatório'];
+        return[
+            'name_course.required'=>'O campo curso é obrigatório',
+            'name_course.string'=>'O campo curso deve ser string',
+        ];
     }
 }

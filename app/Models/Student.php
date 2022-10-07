@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+    use HasFactory;
     protected $table = "student";
     protected $fillable=[
         'name_student',
@@ -16,7 +17,7 @@ class Student extends Model
         'CPF',
         'phone',
         'email',
-        'birth date'
+        'birth_date'
     ];
 }
 

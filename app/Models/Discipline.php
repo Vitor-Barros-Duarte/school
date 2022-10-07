@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Discipline extends Model
 {
+    use HasFactory;
     public $timestamps = false;
     protected $table = "discipline";
     public $fillable = [

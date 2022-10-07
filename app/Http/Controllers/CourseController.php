@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\CourseStoreFormRequest;
 use App\Models\Course;
+use App\Models\Discipline;
 
 class CourseController extends Controller
 {
