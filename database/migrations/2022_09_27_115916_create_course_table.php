@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('course', function (Blueprint $table) {
             $table->id();
             $table->string('name_course');
+            $table->foreignId('discipline_id')->constraint();
             $table->integer('load_hours');
             $table->timestamps();
         });

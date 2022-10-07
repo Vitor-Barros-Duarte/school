@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('teacher', function (Blueprint $table) {
             $table->id();
             $table->string('name_teacher');
+            $table->foreignId('discipline_id')->constraint();
             $table->string('phone');
             $table->string('cpf')->unique();
             $table->enum('sex',['M','F','I']);

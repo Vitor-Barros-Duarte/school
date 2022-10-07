@@ -34,6 +34,10 @@
           <label for="name_course">Course</label>
           <input type="text" class="form-control" id="name_course" name='name_course' placeholder="Curso">
         </div>
+        <div class="form-group">
+            <div class="col-md-12">
+            <label for="name_discipline">discipline</label> <select id="id_discipline" name="name_discipline" class="form-control"></select>
+        </div>
         <div class="col-md-4 pull-right">
           <button type="submit" class="btn btn-primary mb-3">Salvar</button>
         </div>

@@ -16,7 +16,8 @@ class CourseController extends Controller
     public function index()
     {
         $course = course::all();
-        return view('school.course.index', compact('course'));
+        $discipline = discipline::all();
+        return view('school.course.index',['course'=>$course, 'discipline'=>$discipline]);
     }
 
     /**

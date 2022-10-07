@@ -17,6 +17,7 @@
         <tr>
            <th>Nome</th>
            <th>Aluno</th>
+           <th>Curso</th>
            <th>Turma</th>
            <th>Ações</th>
         </tr>
