@@ -19,5 +19,14 @@ class Student extends Model
         'email',
         'birth_date'
     ];
+    public function course()
+    {
+        return $this->belongsTo(course::class);
+    }
+    public function team()
+    {
+        return $this->hasOne(team::class, 'student_id');
+    }
+
 }
 

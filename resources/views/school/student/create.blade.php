@@ -44,7 +44,6 @@
             </div>
             <div class="form-group">
                 <label for="name_course">Curso</label> <select id="name_course" name="name_course" class="form-control"></select>
-                    <option value="{{ $discipline->name_discipline ?? '' }}"></option>
             </div>
           <div class="col-md-6">
             <div class="form-group">

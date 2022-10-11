@@ -18,7 +18,6 @@
             <th>id</th>
             <th>Nome</th>
             <th>disciplina</th>
-            <th>turma</th>
             <th>Ações</th>
         </tr>
     </thead>

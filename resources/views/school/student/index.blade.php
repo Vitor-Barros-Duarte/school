@@ -18,7 +18,7 @@
            <th>Nome</th>
            <th>Aluno</th>
            <th>Curso</th>
-           <th>Turma</th>
+           <th>Data de nascimento</th>
            <th>Ações</th>
         </tr>
     </thead>

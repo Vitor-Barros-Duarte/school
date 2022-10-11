@@ -17,8 +17,7 @@
         <tr>
            <th>id</th>
            <th>nome</th>
-           <th>course</th>
-           <th>Professor</th>
+           <th>Carga_horária</th>
            <th>Ações</th>
         </tr>
     </thead>

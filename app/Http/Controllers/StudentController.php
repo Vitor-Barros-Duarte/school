@@ -29,6 +29,7 @@ class StudentController extends Controller
      */
     public function create()
     {
+        $course = course::pluck('name_course', 'id');
         return view('school.student.create');
     }
 

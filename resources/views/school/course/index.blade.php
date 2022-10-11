@@ -18,6 +18,7 @@
         <tr>
             <th>id</th>
             <th>Nome</th>
+            <th>Carga_horária</th>
             <th>disciplina</th>
             <th>Turma</th>
             <th>Ações</th>

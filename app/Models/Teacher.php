@@ -17,4 +17,12 @@ class Teacher extends Model
         'email',
 
     ];
+    public function discipline()
+    {
+        return $this->belongsTo(Discipline::class);
+    }
+    public function team()
+    {
+        return $this->hasOne(team::class, 'teacher_id');
+    }
 }

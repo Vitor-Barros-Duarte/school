@@ -1,4 +1,4 @@
-@extends('adminlte::page') @section('title', 'Disciplina')
+@extends('adminlte::page') @section('title', 'Course')
 @section('css')
 	<style>
 	.form-control{
@@ -36,14 +36,19 @@
         </div>
         <div class="form-group">
             <div class="col-md-12">
-            <label for="name_discipline">discipline</label> <select id="id_discipline" name="name_discipline" class="form-control"></select>
+            <label for="name_discipline">discipline</label>
+            <select id="name_discipline" name="name_discipline" class="form-control"></select>
         </div>
+        <div class="col-md-12">
+            <label for="load_hours">Carga_horária</label>
+            <input type="time" class="form-control" id="load_hours" name='load_hours' placeholder="Carga_horária">
+        </div>
+        </form>
         <div class="col-md-4 pull-right">
           <button type="submit" class="btn btn-primary mb-3">Salvar</button>
         </div>
     </div>
   </form>
-
 @stop
 @section('js')
 @stop
