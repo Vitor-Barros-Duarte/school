@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\TeamStoreFormRequest;
-use App\Http\Resources\student;
 use App\Models\Course;
 use App\Models\Discipline;
+use App\Models\Student;
 use App\Models\Teacher;
 use App\Models\Team;
 
@@ -19,8 +19,12 @@ class TeamController extends Controller
      */
     public function index()
     {
-        $team = team::all();
-        return view('school.team.index', compact('team'));
+        $teams = team::all();
+        $courses = Course::all();
+        $disciplines = Discipline::all();
+        $students = Student::all();
+        $teachers = teacher::all();
+        return view('school.team.index', compact('teams','courses', 'disciplines', 'teachers', 'students'));
     }
 
     /**
@@ -30,7 +34,11 @@ class TeamController extends Controller
      */
     public function create()
     {
-        return view('school.team.create');
+        $courses = Course::all();
+        $disciplines = Discipline::all();
+        $students = Student::all();
+        $teachers = teacher::all();
+        return view('school.team.create', compact('courses', 'disciplines', 'teachers', 'students'));
     }
 
     /**

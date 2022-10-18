@@ -27,8 +27,8 @@ class CourseController extends Controller
      */
     public function create()
     {
-        $discipline = Discipline::all();
-        return view('school.course.create', compact('discipline'));
+        $disciplines = Discipline::all();
+        return view('school.course.create', compact('disciplines'));
     }
 
     /**

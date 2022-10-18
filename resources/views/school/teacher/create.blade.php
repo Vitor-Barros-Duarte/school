@@ -43,8 +43,11 @@
           </select>
             </div>
             <div class="form-group">
-                <label for="discipline">Disciplina</label> <select id="disciplinei" name="discipline" class="form-control"></select>
-                    <option value="{{ $discipline->name_discipline ?? '' }}"></option>
+                <label for="disciplines">Disciplina</label>
+                <select id="disciplines" name="disciplines[]" class="form-control js-example-basic-multiple" multiple style="width:100%">
+                @foreach($disciplines as $discipline)
+                <option value="{{$discipline->id}}">{{ $discipline->name_discipline }}</option>
+                @endforeach</select>
             </div>
           <div class="col-md-6">
             <div class="form-group">
@@ -123,4 +126,9 @@
 </form>
 @stop
 @section('js')
+<script>
+    $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+    });
+</script>
 @stop

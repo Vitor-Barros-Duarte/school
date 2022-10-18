@@ -43,7 +43,12 @@
           </select>
             </div>
             <div class="form-group">
-                <label for="name_course">Curso</label> <select id="name_course" name="name_course" class="form-control"></select>
+                <label for="courses">Curso</label>
+                <select id="courses" name="courses[]" class="form-control js-example-basic-multiple" multiple style="width:100%">
+                    @foreach($courses as $key=> $course)
+                    <option value="{{$key}}">{{ $course }}</option>
+                    @endforeach
+                </select>
             </div>
           <div class="col-md-6">
             <div class="form-group">
@@ -122,4 +127,9 @@
 </form>
 @stop
 @section('js')
+<script>
+    $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+    });
+</script>
 @stop

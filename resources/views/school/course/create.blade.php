@@ -29,17 +29,21 @@
 <form action="{{route('course.store')}}" method="POST">
     @csrf
     @method('POST')
-    <div class='row'>
+    <div class='form-group row'>
         <div class="col-md-12">
-          <label for="name_course">Course</label>
+          <label for="name_course">Curso</label>
           <input type="text" class="form-control" id="name_course" name='name_course' placeholder="Curso">
         </div>
-        <div class="form-group">
-            <div class="col-md-12">
-            <label for="name_discipline">discipline</label>
-            <select id="name_discipline" name="name_discipline" class="form-control"></select>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="disciplines">disciplina</label>
+            <select id="disciplines" name="disciplines[]" class="form-control js-example-basic-multiple" multiple style="width:100%">
+            @foreach($disciplines as $discipline)
+            <option value="{{$discipline->id}}">{{ $discipline->name_discipline }}</option>
+            @endforeach</select>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <label for="load_hours">Carga_horária</label>
             <input type="time" class="form-control" id="load_hours" name='load_hours' placeholder="Carga_horária">
         </div>
@@ -51,4 +55,9 @@
   </form>
 @stop
 @section('js')
+<script>
+    $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+    });
+</script>
 @stop

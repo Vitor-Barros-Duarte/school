@@ -19,7 +19,7 @@
             <th>id</th>
             <th>Nome</th>
             <th>Carga_horária</th>
-            <th>disciplina</th>
+            <th>Disciplina</th>
             <th>Turma</th>
             <th>Ações</th>
         </tr>
@@ -31,7 +31,7 @@
               <td>{{ $course->id }}</td>
               <td>{{ $course->name_course }}</td>
               <td>{{ $course->load_hours }}</td>
-              <td>{{ $course->Discipline }}</td>
+              <td>{{ $course->discipline }}</td>
               <td>
                 <th class='d-flex'>
                     <a href="{{route('course.edit', $course->id)}}" class="btn btn-success me-mb-3"><i class="fas fa-pencil-alt"></i></a>

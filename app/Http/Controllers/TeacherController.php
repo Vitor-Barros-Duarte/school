@@ -30,7 +30,8 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        return view('school.teacher.create');
+        $disciplines = discipline::all();
+        return view('school.teacher.create', compact('disciplines'));
     }
 
     /**

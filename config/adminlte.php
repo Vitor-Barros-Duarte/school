@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'School',
+    'title' => 'Escola',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>School</b>',
+    'logo' => '<b>Escola</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -312,27 +312,27 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Student',
+            'text'        => 'Aluno',
             'url'         => '/student',
             'icon'        => 'far fa-fw fa-file',
         ],
         [
-            'text'        => 'Teacher',
+            'text'        => 'Professor',
             'url'         => '/teacher',
             'icon'        => 'far fa-fw fa-file',
         ],
         [
-            'text'        => 'Course',
+            'text'        => 'Curso',
             'url'         => '/course',
             'icon'        => 'far fa-fw fa-file',
         ],
         [
-            'text'        => 'Discipline',
+            'text'        => 'Disciplina',
             'url'         => '/discipline',
             'icon'        => 'far fa-fw fa-file',
         ],
         [
-            'text'        => 'Team',
+            'text'        => 'turma',
             'url'         => '/team',
             'icon'        => 'far fa-fw fa-file',
         ],
@@ -459,16 +459,16 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
                 ],
                 [
                     'type' => 'css',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css',
                 ],
             ],

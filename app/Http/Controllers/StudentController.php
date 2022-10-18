@@ -19,6 +19,7 @@ class StudentController extends Controller
     public function index()
     {
         $student = student::all();
+        $course = course::all();
         return view('school.student.index', compact('student'));
     }
 
@@ -29,8 +30,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        $course = course::pluck('name_course', 'id');
-        return view('school.student.create');
+        $courses = course::pluck('name_course', 'id');
+        return view('school.student.create', compact('courses'));
     }
 
     /**

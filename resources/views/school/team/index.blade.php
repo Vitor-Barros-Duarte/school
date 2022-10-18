@@ -24,7 +24,7 @@
     </thead>
     <tbody>
 
-        @foreach($team as $team)
+        @foreach($teams as $team)
            <tr>
               <td>{{ $team->id }}</td>
               <td>{{ $team->name_team }}</td>
