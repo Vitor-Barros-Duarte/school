@@ -12,6 +12,7 @@ class Teacher extends Model
     protected $fillable=[
         'name_teacher',
         'name_discipline',
+        'disciplines',
         'cpf',
         'phone',
         'email',
@@ -19,7 +20,7 @@ class Teacher extends Model
     ];
     public function discipline()
     {
-        return $this->belongsTo(Discipline::class);
+        return $this->belongsToMany(Discipline::class);
     }
     public function team()
     {

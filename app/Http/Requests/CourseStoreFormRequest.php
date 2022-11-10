@@ -25,6 +25,8 @@ class CourseStoreFormRequest extends FormRequest
     {
         return [
             'name_course'=>'required|string',
+            'load_hours'=>'nullable',
+            'discipline_id'=>'nullable',
         ];
     }
     public function messages()

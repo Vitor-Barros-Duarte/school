@@ -13,16 +13,17 @@ class Discipline extends Model
     public $timestamps = false;
     protected $table = "discipline";
     public $fillable = [
+        'discipline_id',
         'name_discipline',
         'load_hours',
 
     ];
-    public function course()
+    public function courses()
     {
-        return $this->hasOne(Course::class, 'discipline_id');
+        return $this->hasMany('App\Models\course');
     }
     public function teacher()
     {
-        return $this->hasOne(teacher::class, 'discipline_id');
+        return $this->hasMany(teacher::class, 'discipline_id', 'name_discipline');
     }
 }

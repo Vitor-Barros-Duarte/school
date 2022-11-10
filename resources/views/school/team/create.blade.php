@@ -42,14 +42,14 @@
             @endforeach
         </select>
     </div>
-    <div class="col-md-6">
+    <div class="form-group">
         <label for="teachers">Professores</label>
         <select id="teachers" name="teachers[]" class="form-control js-example-basic-multiple" multiple style="width:100%">
         @foreach($teachers as $teacher)
         <option value="{{$teacher->id}}">{{ $teacher->name_teacher }}</option>
         @endforeach</select>
     </div>
-    <div class="col-md-6">
+    <div class="form-group">
         <label for="students">Alunos</label>
         <select id="students" name="students[]" class="form-control js-example-basic-multiple" multiple style="width:100%">
         @foreach($students as $student)

@@ -14,20 +14,20 @@ class Course extends Model
     protected $table = "course";
     public $fillable = [
         'name_course',
-        'name_discipline',
+        'discipline_id',
         'load_hours',
     ];
 
-    public function discipline()
+    public function disciplines()
     {
-        return $this->belongsTo(discipline::class);
+        return $this->belongsTo(disciplines::class);
     }
     public function student()
     {
-        return $this->hasOne(student::class, 'course_id');
+        return $this->hasMany(student::class, 'course_id', 'name_course');
     }
     public function team()
     {
-        return $this->hasOne(team::class, 'course_id');
+        return $this->hasMany(team::class, 'course_id', 'name_course');
     }
 }

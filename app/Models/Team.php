@@ -20,14 +20,14 @@ class Team extends Model
     ];
     public function course()
     {
-        return $this->belongsTo(Course::class);
+        return $this->belongsToMany(Course::class);
     }
     public function teacher()
     {
-        return $this->belongsTo(Teacher::class);
+        return $this->belongsToMany(Teacher::class);
     }
     public function student()
     {
-        return $this->belongsTo(student::class);
+        return $this->belongsToMany(student::class);
     }
 }
